@@ -1,0 +1,31 @@
+spring:
+  # 视图解析器
+  thymeleaf:
+    encoding: utf-8
+    suffix: .html
+    prefix: classpath:/templates/
+    mode: HTML
+    cache: false
+    servlet:
+      content-type: text/html
+
+  # 配置数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/erp?useSSL=false&serverTimezone=GMT
+    username: root
+    password: root
+
+# 日志
+logging:
+  file:
+    name: log/erpLog.log
+
+# mybatis 配置
+mybatis:
+  # mapper.xml文件所在
+  mapper-locations: classpath:mapper/*.xml
+  # 实体类所在包
+  type-aliases-package: com.xt.entity
+
+# --- ---------
